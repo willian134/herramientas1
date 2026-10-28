@@ -12,4 +12,8 @@ class Product {
     var id: Int? = null
 
     var description: String? = null
+
+    var price: String? = null
+
+    var stock: Int? = null
 }

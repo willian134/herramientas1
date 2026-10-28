@@ -5,5 +5,4 @@ import org.springframework.stereotype.Repository
 import suda.com.trabajos.model.Product
 
 @Repository
-interface ProductRepository : JpaRepository<Product, Int> {
-}
+interface ProductRepository : JpaRepository<Product, Int>
