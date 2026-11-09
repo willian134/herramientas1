@@ -7,7 +7,7 @@ import suda.com.trabajos.model.Product
 import suda.com.trabajos.service.ProductService
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/products") // 👈 Cambiado de /product a /products
 class ProductController {
 
     @Autowired
@@ -23,7 +23,7 @@ class ProductController {
         return productService.getById(id)
     }
 
-    @PostMapping("/guardar")
+    @PostMapping // Nota: Tradicionalmente en REST para crear solo se usa POST a /products
     @ResponseStatus(HttpStatus.CREATED)
     fun crear(@RequestBody product: Product): Product {
         return productService.save(product)

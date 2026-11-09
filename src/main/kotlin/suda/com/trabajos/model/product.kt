@@ -4,16 +4,20 @@ import jakarta.persistence.*
 
 @Entity
 @Table(name = "product")
-class Product {
+open class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(updatable = false)
-    var id: Int? = null
+    open var id: Int? = null
 
-    var description: String? = null
+    @Column(nullable = false)
+    open var nombre: String? = null
 
-    var price: String? = null
+    open var description: String? = null
 
-    var stock: Int? = null
+    open var price: Double? = null
+
+    @Column(nullable = false)
+    open var stock: Int = 0
 }
